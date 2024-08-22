@@ -1,0 +1,162 @@
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+  
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+  
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+margin: 0;
+display: flex;
+place-items: center;
+min-width: 320px;
+min-height: 100vh;
+padding: 9px;
+}
+
+#root {
+    width: 100vw;
+    display: flex;
+    place-items: center;
+    flex-direction: column;
+}
+
+.premiados {
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+}
+
+.usuario {
+    position: relative;
+    width: 430px;
+    height: 180px;
+    border: 1px solid rgba(200,200,200,.3);
+    margin: 10px;
+    border-radius: 9px;
+    background-color: rgba(200,200,200,.1);
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.usuario:before {
+    border-radius: 50%;
+    border: 7px solid;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: -100px;
+    top: 75px;
+    text-align: center;
+    line-height: 50px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.usuario:nth-of-type(1):before {
+    content: '1st';
+    border-color: goldenrod;
+    box-shadow: 0 0 0px 5px gold;
+    text-shadow: 0 0 3px goldenrod;
+    background-color: rgb(150, 150, 50);
+}
+
+.usuario:nth-of-type(2):before {
+    content: '2nd';
+    border-color: grey;
+    box-shadow: 0 0 0px 5px silver;
+    text-shadow: 0 0 3px azure;
+    background-color: rgb(100, 100, 100);
+}
+
+.usuario:nth-of-type(3):before {
+    content: '3rd';
+    border-color: chocolate;
+    box-shadow: 0 0 0px 5px coral;
+    text-shadow: 0 0 3px darksalmon;
+    background-color: rgb(150, 100, 50);
+}
+
+.usuario-info > h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    text-overflow: ellipsis;
+}
+
+.usuario-info > h3:hover {
+    text-overflow: inherit;
+}
+
+.usuario-info {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    padding-left: 7px;
+}
+
+.usuario-info > h4 {
+    font-size: 9px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    color:cadetblue;
+}
+
+.usuario-info > h6 {
+    font-size: 11px;
+    line-height: 12px;
+    margin: 0;
+    font-weight: 300;
+    color:cornflowerblue;
+}
+
+.usuario-info > h5 {
+    font-size: 16px;
+    line-height: 18px;
+    margin: 0;
+    font-weight: 500;
+}
+
+.usuario-info > h5 > span {
+    font-size: 12px;
+    font-weight: 500;
+    color: cornflowerblue;
+}
+
+.usuario-info > h5::first-letter {
+    text-transform: capitalize;
+}
+
+.usuario-pic {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 160px;
+    padding-right: 7px;
+}
+
+.usuario-pic > img {
+    object-fit: cover;
+    border: 1px solid cornflowerblue;
+    border-radius: 3px;
+}
+
+.usuario-pic > h5 {
+    margin: 3px 0;
+    text-align: center;
+    font-weight: 500;
+}
+
+.usuario-pic > h5 > span {
+    font-weight: 900;
+}
