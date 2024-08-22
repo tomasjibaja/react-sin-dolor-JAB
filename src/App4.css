@@ -1,0 +1,115 @@
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+  
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+  
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+margin: 0;
+display: flex;
+place-items: center;
+min-width: 320px;
+min-height: 100vh;
+padding: 9px;
+}
+
+#root {
+    width: 100vw;
+    display: flex;
+    place-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 25px;
+}
+
+.kings-container {
+    max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 9px;
+    justify-items: center;
+    justify-content: space-around;
+    margin: 0 auto;
+    transition: all .3s ease-in-out;
+}
+
+.king-card {
+    width: 270px;
+    height: 410px;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    padding: 9px;
+    margin: 15px;
+}
+
+.king-card > img {
+    width: 200px;
+    align-self: center;
+    margin: 30px;
+}
+
+.king-card > h2 {
+    margin: 0 10px;
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+.king-card > h3 {
+    margin: 0 10px;
+    font-weight: 400;
+}
+
+.king-card > button {
+    width: 90px;
+    height: 40px;
+    border-radius: 9px;
+    font-size: 1rem;
+    margin: 10px;
+    cursor: pointer;
+    background-color: rgba(180, 180, 180, 0.3);
+}
+
+.king-card > button:hover {
+    background-color: rgba(210, 210, 210, 0.1);
+    border-color: rgba(150,150,250,.3);
+}
+
+.king-detail {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 250px;
+    height: 50px;
+    background-color: rgba(50,50,50,.7);
+    border-radius: 7px;
+    margin: 7px;
+    padding: 0 20px;
+}
+
+.king-detail > h3 {
+    width: 180px;
+    text-align: right;
+}
+
+.detalle {
+    width: 300px;
+    overflow: hidden;
+    transition: all .5s ease-in-out;
+}
+
+.detalle > h4 > span {
+    cursor: pointer;
+}
