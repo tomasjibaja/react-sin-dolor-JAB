@@ -1,0 +1,133 @@
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+  
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+  
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body, #root {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+}
+
+.wrapper {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    border: 1px solid;
+    border-radius: 7px;
+    background-color: rgb(49, 66, 66);
+}
+
+.langs {
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-sizing: content-box;
+}
+
+.langs > img {
+    width: 70px;
+    cursor: pointer;
+    outline: 3px solid transparent;
+    outline-offset: 3px;
+    transition: outline .2s ease-in-out;
+}
+
+.langs > img:hover {
+    outline-color:rgba(255, 68, 0, 0.7);
+}
+
+.info-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.button-wrapper {
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.button-wrapper > button {
+    width: 47%;
+    height: 2rem;
+    font-size: 1rem;
+    margin: 1rem 0;
+    background-color: darkcyan;
+    border: 1px solid floralwhite;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color .1s ease-in-out;
+}
+
+.button-wrapper > button:hover {
+    background-color: rgb(2, 125, 125);
+}
+
+.teacher {
+    background-color: darkcyan;
+    border: 1px solid floralwhite;
+    border-radius: 4px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    transition: opacity .3s ease-in-out;
+}
+
+.teacher > h2 {
+    margin: .3rem;
+    font-size: 2rem;
+}
+
+.teacher > h3 {
+    margin: 1rem;
+    font-size: 1.3rem;
+}
+
+.teacher > img {
+    width: 200px;
+}   
+
+.address {
+    background-color: darkcyan;
+    border: 1px solid floralwhite;
+    border-radius: 4px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    transition: opacity .3s ease-in-out;
+}
+
+.address > h2 {
+    margin: 0;
+    margin-top: .3rem;
+    font-size: 2rem;
+}
+
+.address > p {
+    padding: 1rem;
+    padding-top: 0;
+    margin: 0;
+}
