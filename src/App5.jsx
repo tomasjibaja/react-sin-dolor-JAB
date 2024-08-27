@@ -98,8 +98,8 @@ const App5 = () => {
       </div>
       <h5 style={{ marginTop: "0" }}>(Primer rey que empiece con {inicial})</h5>
       <p style={{ marginTop: "0", color: 'darkcyan', fontSize: '36px' }}>{reyE != undefined ? reyE.nombre : `No se ha encontrado un rey que empiece con ${inicial}.`}</p>
-      <h2 style={{ marginBottom: "0" }}>Actividad 4:</h2>
-      <h5 style={{ marginTop: "0" }}>(Contador de vacas y reinados)</h5>
+      {/* <h2 style={{ marginBottom: "0" }}>Actividad 4:</h2>
+      <h5 style={{ marginTop: "0" }}>(Contador de vacas y reinados)</h5> */}
     </>
   );
 }
