@@ -1,5 +1,5 @@
 import React from 'react'
-import { useReducer } from 'react'
+import { useReducer, useState } from 'react'
 
 const meses = [ 'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
 
@@ -24,10 +24,10 @@ const reducer = (state, action) => {
         break;
       }
     case 'masA':
-      newState = { m: state.m, a: state.a + 1};
+      newState = { m: state.m, a: state.a + action.payload};
       break;
     case 'menosA':
-      newState = { m: state.m, a: state.a - 1};
+      newState = { m: state.m, a: state.a - action.payload};
       break;
   }
 
@@ -45,18 +45,24 @@ const reducer = (state, action) => {
 }
 
 const Calendario = () => {
+  const [unidades, setUnidades] = useState(1)
   const [fecha, dispatch] = useReducer(reducer, valorInicial)
   return (
     <>
       <h1 style={ style }>{meses[fecha.m]} ({fecha.a})</h1>
-      <div>
-        <span>Meses: </span>
-        <button onClick={() => dispatch({ type: 'menosM' })}>-</button>
-        <button onClick={() => dispatch({ type: 'masM' })}>+</button>
-        <br />
-        <span>Año: </span>
-        <button onClick={() => dispatch({ type: 'menosA' })}>-</button>
-        <button onClick={() => dispatch({ type: 'masA' })}>+</button>
+      <div className='buttons'>
+        <div className='meses'>
+          <span>Meses: </span>
+          <button onClick={() => dispatch({ type: 'menosM' })}>-</button>
+          <button onClick={() => dispatch({ type: 'masM' })}>+</button>
+        </div>
+        <div className="anos">
+          <span>Año: </span>
+          <button onClick={() => dispatch({ type: 'menosA', payload: Number(unidades) })}>-</button>
+          <input type="number" value={unidades} onChange={(e) => {setUnidades(e.target.value); console.log(unidades)}}/>
+          <button onClick={() => dispatch({ type: 'masA', payload: Number(unidades)  })}>+</button>
+        </div>
+        
       </div>
     </>
   )

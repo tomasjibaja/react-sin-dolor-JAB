@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import App from './App9.jsx'
+import App from './ListaSuper.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
