@@ -11,6 +11,7 @@ const Nav = () => {
         <NavLink to={'/6b'}>ChuckNorris</NavLink>
         <NavLink to={'/7teacher'}>Idiomas</NavLink>
         <NavLink to={'/robogen'}>RoboGen</NavLink>
+        <NavLink to={'/listasuper'}>ListaSuper</NavLink>
     </nav>
   )
 }

@@ -3,10 +3,10 @@ import { Context } from './Context'
 import Item from './Item'
 
 const Items = () => {
-  const {items} = useContext(Context) 
-  return (items.length > 0 &&
+  const {productos} = useContext(Context) 
+  return (productos.length > 0 &&
     (<div className='item-wrapper'>
-      {items.map((elem, index) => {
+      {productos.map((elem, index) => {
         return (
           <Item key={index} props={elem} />
         )

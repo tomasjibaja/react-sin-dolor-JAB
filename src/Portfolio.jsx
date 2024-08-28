@@ -8,6 +8,7 @@ import App6 from './App6'
 import App6b from './App6b'
 import App7teacher from './App7teacher'
 import AppRobogen from './App(RoboGen)'
+import ListaSuper from './ListaSuper'
 import './Portfolio.css'
 import Nav from './portfolio/Nav'
 
@@ -23,6 +24,7 @@ const Portfolio = () => {
         <Route path='/6b' element={<App6b />} />
         <Route path='/7teacher' element={<App7teacher />} />
         <Route path='/robogen' element={<AppRobogen />} />
+        <Route path='/listasuper' element={<ListaSuper />} />
         <Route path='*' element={<Error404 />} />
       </Routes>
     </BrowserRouter>
